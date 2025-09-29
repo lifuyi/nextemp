@@ -8,8 +8,8 @@ const quote = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.1,
-      staggerChildren: 0.08,
+      delay: 0.3,
+      staggerChildren: 0.15,
     },
   },
 };
@@ -23,7 +23,7 @@ const singleWord = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 0.5,
+      duration: 0.8,
     },
   },
 };
@@ -34,6 +34,9 @@ const AnimatedText = ({ text, className = "", gradient = false }) => {
     ? "bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 bg-clip-text text-transparent animate-gradient" 
     : "";
     
+  // Special handling for "Frank Li" to keep it on one line
+  const isFrankLi = text.includes("Frank Li");
+  
   return (
     <div
       className="py-2 w-full mx-auto flex flex-col items-center justify-center  text-center  
@@ -46,17 +49,36 @@ const AnimatedText = ({ text, className = "", gradient = false }) => {
         initial="hidden"
         animate="visible"
       >
-        {text.split(" ").map((char, index) => {
-          return (
+        {isFrankLi ? (
+          // Keep "Frank Li" together on one line
+          <>
             <motion.span
               className="inline-block"
-              key={char + "-" + index}
               variants={singleWord}
             >
-              {char} 
+              Hey, I'm 
             </motion.span>
-          );
-        })}
+            <motion.span
+              className="inline-block"
+              variants={singleWord}
+            >
+              Frank Li
+            </motion.span>
+          </>
+        ) : (
+          // Normal word splitting for other texts
+          text.split(" ").map((char, index) => {
+            return (
+              <motion.span
+                className="inline-block"
+                key={char + "-" + index}
+                variants={singleWord}
+              >
+                {char} 
+              </motion.span>
+            );
+          })
+        )}
       </motion.h1>
     </div>
   );

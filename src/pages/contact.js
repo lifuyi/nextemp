@@ -151,7 +151,7 @@ export default function About() {
                         className="apple-button px-6 py-3 font-bold capitalize text-white hover:scale-105 
                         hover:shadow-apple-lg transition-all duration-300"
                       >
-                        Send Message
+                        📨 Send Message
                       </button>
                     </div>
                   </form>
