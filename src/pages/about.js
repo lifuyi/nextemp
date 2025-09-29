@@ -9,6 +9,7 @@ import Experience from "@/components/Experience";
 import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
 import { HireMe2 } from "@/components/HireMe2";
+import PhotoGallery from "@/components/PhotoGallery";
 
 function AnimatedNumberFramerMotion({ value }) {
   const ref = useRef(null);
@@ -33,6 +34,46 @@ function AnimatedNumberFramerMotion({ value }) {
 
   return <span ref={ref} />;
 }
+
+// Sample working photos - replace with actual photo data
+const workingPhotos = [
+  {
+    src: "/images/gallery/work-1.jpg",
+    alt: "Frank Li presenting at Chinida.com launch",
+    title: "Chinida.com Launch Event",
+    description: "Presenting our AI coding platform to investors and partners"
+  },
+  {
+    src: "/images/gallery/work-2.jpg", 
+    alt: "Business meeting with international partners",
+    title: "International Partnership Meeting",
+    description: "Negotiating strategic partnerships with European fintech companies"
+  },
+  {
+    src: "/images/gallery/work-3.jpg",
+    alt: "Frank Li at MOMO headquarters",
+    title: "MOMO Leadership Team",
+    description: "Leading business development initiatives at MOMO (NASDAQ)"
+  },
+  {
+    src: "/images/gallery/work-4.jpg",
+    alt: "Tech conference presentation",
+    title: "Industry Conference Speaker",
+    description: "Sharing insights on mobile payment innovations and partnerships"
+  },
+  {
+    src: "/images/gallery/work-5.jpg",
+    alt: "Team collaboration session",
+    title: "Strategy Planning Session",
+    description: "Collaborating with technical teams on product development"
+  },
+  {
+    src: "/images/gallery/work-6.jpg",
+    alt: "Office workspace",
+    title: "Daily Work Environment",
+    description: "Managing multiple projects and international partnerships"
+  }
+];
 
 export default function About() {
   return (
@@ -147,6 +188,7 @@ export default function About() {
 
           <Skills />
           <Experience />
+          <PhotoGallery photos={workingPhotos} />
         </Layout>
       </main>
     </>

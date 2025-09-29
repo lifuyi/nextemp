@@ -53,7 +53,7 @@ export default function Home() {
                 With 15+ years of experience in business development and strategic partnerships with global tech companies, 
                 I combine technical expertise with business acumen to drive innovation in AI and software solutions.
               </p>
-              <div className="mt-2 flex items-center self-start gap-3 grid-cols-2 lg:self-center">
+              <div className="mt-2 flex items-center self-start gap-3 grid-cols-3 lg:self-center lg:grid lg:grid-cols-1">
                 <Link
                   href="/about/"
                   target={"_self"}
@@ -73,6 +73,16 @@ export default function Home() {
              `}
                 >
                   Achievements
+                </Link>
+                <Link
+                  href="/gallery/"
+                  target={"_self"}
+                  className={`flex items-center apple-card p-3 px-8 text-lg font-semibold
+            capitalize text-appleGreen hover:scale-105 hover:shadow-apple-lg border-0
+            md:p-2.5 md:px-6 md:text-base transition-all duration-300
+             `}
+                >
+                  📸 Gallery
                 </Link>
               </div>
             </div>

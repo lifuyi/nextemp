@@ -108,10 +108,11 @@ const Navbar = () => {
       <div className="w-full flex justify-between items-center lg:hidden">
         <nav className="flex items-center justify-center backdrop-blur-md bg-light/80 dark:bg-dark/80 
         rounded-full px-6 py-2 shadow-apple">
-          <CustomLink className="mr-6" href="/" title="Home" />
-          <CustomLink className="mx-6" href="/about" title="About" />
-          <CustomLink className="mx-6" href="/projects" title="Achievements" />
-          <CustomLink className="ml-6" href="/contact" title="Contact" />
+          <CustomLink className="mr-4" href="/" title="Home" />
+          <CustomLink className="mx-4" href="/about" title="About" />
+          <CustomLink className="mx-4" href="/projects" title="Achievements" />
+          <CustomLink className="mx-4" href="/gallery" title="Gallery" />
+          <CustomLink className="ml-4" href="/contact" title="Contact" />
         </nav>
         <nav
           className="flex items-center justify-center flex-wrap lg:mt-2 backdrop-blur-md 
@@ -204,6 +205,12 @@ const Navbar = () => {
               className="mx-4 lg:m-0 lg:my-2"
               href="/projects"
               title="Achievements"
+            />
+            <CustomMobileLink
+              toggle={handleClick}
+              className="mx-4 lg:m-0 lg:my-2"
+              href="/gallery"
+              title="Gallery"
             />
             <CustomMobileLink
               toggle={handleClick}
