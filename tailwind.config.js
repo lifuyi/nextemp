@@ -16,12 +16,19 @@ module.exports = {
         mont: ["var(--font-mont)", ...fontFamily.sans],
       },
       colors: {
-        dark: "#1b1b1b",
-        light: "#f5f5f5",
-        primary: "#2545d0",
-        primaryDark: "#4377ee",
-        lightGreen: "#4377ee",
-        slideGreen: "#2439a9",
+        dark: "#000000",
+        light: "#ffffff",
+        primary: "#007AFF",
+        primaryDark: "#0056CC",
+        lightGreen: "#007AFF",
+        slideGreen: "#0056CC",
+        appleGray: "#F2F2F7",
+        appleDarkGray: "#1C1C1E",
+        appleSecondary: "#8E8E93",
+        appleBlue: "#007AFF",
+        appleGreen: "#34C759",
+        appleOrange: "#FF9500",
+        appleRed: "#FF3B30",
       },
       animation: {
         "spin-slow": "spin 8s linear infinite",
@@ -29,28 +36,27 @@ module.exports = {
 
       backgroundImage: {
         circularLight:
-          "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 100px)",
+          "repeating-radial-gradient(rgba(0,0,0,0.08) 2px,#ffffff 5px,#ffffff 100px)",
         circularDark:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 100px)",
+          "repeating-radial-gradient(rgba(255,255,255,0.08) 2px,#000000 8px,#000000 100px)",
         circularLightLg:
-          "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 80px)",
-
+          "repeating-radial-gradient(rgba(0,0,0,0.08) 2px,#ffffff 5px,#ffffff 80px)",
         circularDarkLg:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 80px)",
+          "repeating-radial-gradient(rgba(255,255,255,0.08) 2px,#000000 8px,#000000 80px)",
         circularLightMd:
-          "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 60px)",
-
+          "repeating-radial-gradient(rgba(0,0,0,0.08) 2px,#ffffff 5px,#ffffff 60px)",
         circularDarkMd:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 60px)",
-
+          "repeating-radial-gradient(rgba(255,255,255,0.08) 2px,#000000 8px,#000000 60px)",
         circularLightSm:
-          "repeating-radial-gradient(rgba(0,0,0,0.4) 2px,#f5f5f5 5px,#f5f5f5 40px)",
-
+          "repeating-radial-gradient(rgba(0,0,0,0.08) 2px,#ffffff 5px,#ffffff 40px)",
         circularDarkSm:
-          "repeating-radial-gradient(rgba(255,255,255,0.5) 2px,#1b1b1b 8px,#1b1b1b 40px)",
+          "repeating-radial-gradient(rgba(255,255,255,0.08) 2px,#000000 8px,#000000 40px)",
       },
       boxShadow: {
-        "3xl": "0 15px 15px 1px rgba(80,230,217, 0.4)",
+        "3xl": "0 15px 15px 1px rgba(0,122,255, 0.4)",
+        "apple": "0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24)",
+        "apple-lg": "0 10px 25px rgba(0,0,0,0.15), 0 4px 10px rgba(0,0,0,0.15)",
+        "apple-xl": "0 20px 40px rgba(0,0,0,0.1), 0 8px 16px rgba(0,0,0,0.1)",
       },
     },
     screens: {

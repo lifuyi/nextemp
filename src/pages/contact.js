@@ -147,9 +147,10 @@ export default function About() {
                     <div className="col-span-1 p-2">
                       <button
                         type="submit"
-                        className="px-4 py-2 font-bold capitalize text-light bg-dark border border-2 border-solid border-dark dark:border-light dark:bg-light rounded-md hover:bg-transparent hover:text-dark dark:hover:text-light dark:hover:bg-dark dark:hover:border-light dark:hover:bg-dark dark:text-dark dark:hover:text-light"
+                        className="apple-button px-6 py-3 font-bold capitalize text-white hover:scale-105 
+                        hover:shadow-apple-lg transition-all duration-300"
                       >
-                        Send it!
+                        Send Message
                       </button>
                     </div>
                   </form>

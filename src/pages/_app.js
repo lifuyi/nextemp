@@ -5,12 +5,25 @@ import { AnimatePresence } from "framer-motion";
 import { Montserrat } from "next/font/google";
 import Head from "next/head";
 import { useRouter } from "next/router";
+import Script from "next/script";
+import { useEffect } from "react";
+import * as gtag from "../lib/gtag";
 
 // If loading a variable font, you don't need to specify the font weight
 const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-mont" });
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
+
+  useEffect(() => {
+    const handleRouteChange = (url) => {
+      gtag.pageview(url);
+    };
+    router.events.on("routeChangeComplete", handleRouteChange);
+    return () => {
+      router.events.off("routeChangeComplete", handleRouteChange);
+    };
+  }, [router.events]);
 
   return (
     <>
@@ -21,6 +34,27 @@ export default function App({ Component, pageProps }) {
         <link rel="preconnect" href="https://cdnjs.cloudflare.com"></link>
         <link rel="preconnect" href="https://fonts.googleapis.com"></link>
       </Head>
+      
+      {/* Google Analytics */}
+      <Script
+        strategy="afterInteractive"
+        src={`https://www.googletagmanager.com/gtag/js?id=${gtag.GA_TRACKING_ID}`}
+      />
+      <Script
+        id="google-analytics"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${gtag.GA_TRACKING_ID}', {
+              page_location: window.location.href,
+              page_title: document.title,
+            });
+          `,
+        }}
+      />
       <main
         className={`${montserrat.variable} font-mont  bg-light dark:bg-dark w-full min-h-screen h-full`}
       >

@@ -11,9 +11,9 @@ const Skill = ({ name, x, y }) => {
       whileInView={{ x: x, y: y, transition: { duration: 1.5 } }}
       viewport={{ once: true }}
       className="cursor-default w-max origin-center absolute 
-       font-semibold bg-dark text-light py-3 px-6 rounded-full dark:bg-light dark:text-dark
-       lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3  xs:bg-transparent xs:dark:bg-transparent xs:text-dark xs:dark:text-light xs:font-bold
-       "
+       font-semibold apple-card py-3 px-6 rounded-full text-appleBlue hover:shadow-apple
+       lg:py-2 lg:px-4 md:text-sm md:py-1.5 md:px-3 xs:text-appleBlue xs:font-bold
+       transition-all duration-300 hover:scale-105"
     >
       {name}
     </motion.div>
@@ -37,8 +37,8 @@ const Skills = () => {
       >
         <motion.div
           whileHover={{ scale: 1.05 }}
-          className="cursor-default flex rounded-full font-semibold bg-dark text-light px-6 py-7 shadow-dark
-        dark:bg-light dark:text-dark lg:p-6 md:p-4 xs:text-xs xs:p-2
+          className="cursor-default flex rounded-full font-semibold apple-button text-white px-8 py-8 
+        lg:p-6 md:p-4 xs:text-xs xs:p-3 hover:shadow-apple-lg transition-all duration-300
         "
         >
           Business Development

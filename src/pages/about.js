@@ -84,18 +84,16 @@ export default function About() {
               </p>
             </div>
             <div
-              className="relative col-span-3 h-max rounded-2xl border-2 border-solid border-dark 
-            bg-light p-8 dark:border-light dark:bg-dark
-            xl:col-span-4 md:col-span-8 md:order-1
-            "
+              className="relative col-span-3 h-max apple-card p-8 
+            xl:col-span-4 md:col-span-8 md:order-1 hover:shadow-apple-lg 
+            transition-all duration-300"
             >
               <div
-                className="absolute  top-0 -right-3 -z-10 h-[103%] w-[102%]  rounded-[2rem] rounded-br-3xl 
-                bg-dark
-        dark:bg-light  "
+                className="absolute top-0 -right-3 -z-10 h-[103%] w-[102%] rounded-[2rem] 
+                bg-gradient-to-br from-appleBlue/20 to-appleBlue/10 blur-xl"
               />
               <Image
-                className="h-auto w-full rounded-2xl border-2 border-solid border-dark"
+                className="h-auto w-full rounded-3xl shadow-apple-xl"
                 priority={true}
                 src={profile}
                 alt="Frank Li"

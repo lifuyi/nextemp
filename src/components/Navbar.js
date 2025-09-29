@@ -6,6 +6,7 @@ import {
   FacebookIcon,
   XIcon,
   LinkedInIcon,
+  GithubIcon,
   MoonIcon,
   SunIcon,
 } from "./Icons";
@@ -105,15 +106,16 @@ const Navbar = () => {
       </button>
 
       <div className="w-full flex justify-between items-center lg:hidden">
-        <nav className="flex items-center justify-center">
-          <CustomLink className="mr-4" href="/" title="Home" />
-          <CustomLink className="mx-4" href="/about" title="About" />
-          <CustomLink className="mx-4" href="/projects" title="Achievements" />
-          <CustomLink className="ml-4" href="/contact" title="Contact" />
+        <nav className="flex items-center justify-center backdrop-blur-md bg-light/80 dark:bg-dark/80 
+        rounded-full px-6 py-2 shadow-apple">
+          <CustomLink className="mr-6" href="/" title="Home" />
+          <CustomLink className="mx-6" href="/about" title="About" />
+          <CustomLink className="mx-6" href="/projects" title="Achievements" />
+          <CustomLink className="ml-6" href="/contact" title="Contact" />
         </nav>
         <nav
-          className="flex items-center justify-center flex-wrap lg:mt-2
-      "
+          className="flex items-center justify-center flex-wrap lg:mt-2 backdrop-blur-md 
+          bg-light/80 dark:bg-dark/80 rounded-full px-4 py-2 shadow-apple"
         >
           <motion.a
             target={"_blank"}
@@ -146,6 +148,17 @@ const Navbar = () => {
             aria-label="Connect on LinkedIn"
           >
             <LinkedInIcon />
+          </motion.a>
+
+          <motion.a
+            target={"_blank"}
+            className="w-7 mx-3"
+            href="https://github.com/lifuyi"
+            whileHover={{ y: -2 }}
+            whileTap={{ scale: 0.9 }}
+            aria-label="Check out my GitHub"
+          >
+            <GithubIcon />
           </motion.a>
 
 

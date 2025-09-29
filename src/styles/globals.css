@@ -2,21 +2,85 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Projects and Articles image background black*/
-img.h-auto.w-full {background: black !important;}
-img.w-full.max-h-80.object-cover {background: black !important;}
+/* Apple-like design system */
+:root {
+  --apple-blur: blur(20px);
+  --apple-radius: 20px;
+  --apple-radius-sm: 12px;
+  --apple-radius-lg: 28px;
+}
 
-/* Profile image shadow*/
-img.h-auto.w-100 { filter: drop-shadow(0 0 0.25rem black);}
+/* Projects and Articles image styling */
+img.h-auto.w-full {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) !important;
+  border-radius: var(--apple-radius) !important;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1) !important;
+  border: 1px solid rgba(255,255,255,0.2) !important;
+}
 
-/* max width before main*/
-div#__next { max-width: 1900px; margin-right: auto; margin-left: auto;}
+img.w-full.max-h-80.object-cover {
+  background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%) !important;
+  border-radius: var(--apple-radius) !important;
+}
+
+/* Profile image with Apple-style shadow */
+img.h-auto.w-100 { 
+  filter: drop-shadow(0 8px 32px rgba(0,0,0,0.15));
+  border-radius: var(--apple-radius-lg);
+}
+
+/* Container styling */
+div#__next { 
+  max-width: 1400px; 
+  margin-right: auto; 
+  margin-left: auto;
+}
 
 /* Homepage min Height */
 .min-h-screen {min-height: 90vh;}
 
-/* Contact form outline */
-textarea:focus, input:focus {outline: none;}
+/* Apple-style form inputs */
+textarea:focus, input:focus {
+  outline: none;
+  border-color: #007AFF;
+  box-shadow: 0 0 0 3px rgba(0,122,255,0.1);
+  transition: all 0.2s ease;
+}
 
-/* Projects and Articles image border black*/
-img.h-auto.w-full {border: 2px solid black; border-radius: 10px;}
+textarea, input {
+  transition: all 0.2s ease;
+  border-radius: var(--apple-radius-sm);
+}
+
+/* Apple-style buttons */
+.apple-button {
+  background: linear-gradient(135deg, #007AFF 0%, #0056CC 100%);
+  border-radius: var(--apple-radius-sm);
+  box-shadow: 0 4px 16px rgba(0,122,255,0.3);
+  backdrop-filter: var(--apple-blur);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.apple-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 32px rgba(0,122,255,0.4);
+}
+
+/* Apple-style cards */
+.apple-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: var(--apple-blur);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: var(--apple-radius);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+}
+
+.dark .apple-card {
+  background: rgba(28, 28, 30, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Smooth transitions */
+* {
+  transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}

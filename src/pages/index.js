@@ -57,10 +57,9 @@ export default function Home() {
                 <Link
                   href="/about/"
                   target={"_self"}
-                  className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
-            capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
-            dark:bg-light dark:text-dark dark:hover:border-light dark:hover:bg-dark dark:hover:text-light
-            md:p-2 md:px-4 md:text-base
+                  className={`apple-button flex items-center p-3 px-8 text-lg font-semibold
+            capitalize text-white hover:scale-105 hover:shadow-apple-lg 
+            md:p-2.5 md:px-6 md:text-base transition-all duration-300
              `}
                 >
                   About Me
@@ -68,10 +67,9 @@ export default function Home() {
                 <Link
                   href="/projects/"
                   target={"_self"}
-                  className={`flex items-center rounded-lg border-2 border-solid bg-light p-2.5 px-6 text-lg font-semibold
-            capitalize text-dark hover:border-light hover:bg-dark hover:text-light 
-            dark:bg-dark dark:text-light dark:hover:bg-light dark:hover:text-dark
-            md:p-2 md:px-4 md:text-base
+                  className={`flex items-center apple-card p-3 px-8 text-lg font-semibold
+            capitalize text-appleBlue hover:scale-105 hover:shadow-apple-lg border-0
+            md:p-2.5 md:px-6 md:text-base transition-all duration-300
              `}
                 >
                   Achievements
