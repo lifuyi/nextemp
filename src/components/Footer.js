@@ -13,15 +13,17 @@ const Footer = () => {
         <span>&copy; {new Date().getFullYear()}</span>
 
         <div className="flex items-center lg:py-2 ml-2">
-          Built <span className="text-2xl px-1"></span>
+          Contact: <span className="text-2xl px-1"></span>
           {""}
-          by&nbsp;
+          &nbsp;
           <Link
-            href="https://travislord.xyz/"
+            href="mailto:lifuyi@gmail.com"
             className="underline underline-offset-2"
           >
-            Travis Lord
+            lifuyi@gmail.com
           </Link>
+          &nbsp;|&nbsp;
+          <span>+86 186 1814 0814</span>
         </div>
       </Layout>
     </footer>

@@ -58,21 +58,48 @@ const Experience = () => {
 
         <ul className="w-full flex flex-col items-start justify-between ml-4 xs:ml-2">
           <Details
-            position="Developer"
-            company="Stellar Innovations"
-            time="2020 - 2024"
-            address="200 Innovations st"
-            companyLink="https://github.com/lilxyzz/clay-theme"
-            work="At Stellar Innovations, I serve as a web developer, where I play a crucial role in designing and implementing cutting-edge web solutions. My responsibilities include developing responsive and high-performance websites and applications using technologies such as HTML, CSS, JavaScript, React, and Node.js. I collaborate closely with cross-functional teams to ensure our projects meet the highest standards of functionality and user experience. One of my key achievements at Stellar Innovations has been leading the development of a comprehensive e-commerce platform that significantly enhanced our client's online presence and sales. My work is driven by a passion for continuous learning and innovation, always striving to push the boundaries of what's possible in web development."
+            position="Founder & CEO"
+            company="CHINIDA.COM"
+            time="Oct 2023 - Present"
+            address="China"
+            companyLink="https://chinida.com"
+            work="Founded Chinida.com, a company specializing in AI coding, software development, and digital products sale. Leading the development of innovative AI-powered solutions and software products. Leveraging 15+ years of business development experience to drive growth in the AI and software industry, combining technical expertise with strategic business leadership."
           />
 
           <Details
-            position="Rad Tester"
-            company="Vault Technologies"
-            time="2018 - 2020"
-            address="404 Tech st"
-            companyLink="https://github.com/lilxyzz/holo-theme"
-            work="At Vault Technologies, I worked as a RAD (Rapid Application Development) Tester, where I was responsible for ensuring the quality and functionality of our software applications during the development process. My role involved designing and executing test plans, identifying and documenting bugs, and working closely with developers to resolve issues quickly. This position required a deep understanding of the software development lifecycle and a keen eye for detail to ensure our applications met the highest standards of performance and reliability. My contributions at Vault Technologies helped streamline our development processes and significantly improved the overall quality of our software products."
+            position="BD Lead"
+            company="HUAFENG-ACCUWEATHER"
+            time="2023.4 - 2023.9"
+            address="Beijing, China"
+            companyLink="#"
+            work="Led business development and sales partnerships for meteorological technology company. Collaborated with major mobile manufacturers (Huawei, Honor, OPPO, VIVO) on data and advertising cooperation. Established data partnerships with automotive manufacturers including SAIC, Great Wall, NIO, and Cherry. Managed over 30 industrial data authorization partners and developed pricing strategies contributing to 100M annual revenue target."
+          />
+
+          <Details
+            position="VP"
+            company="PAYTEND (European Digital Bank)"
+            time="2022.8 - 2023.4"
+            address="Beijing, China"
+            companyLink="#"
+            work="Responsible for commercialization, revenue, marketing and client success for European digital banking services. Managed European market expansion for overseas bank account opening, prepaid card issuing, and cross-border payment solutions. Led Client Success department with 5 team members, launched pre and post-sales support, and acquired new users through Google/Facebook campaigns while optimizing APP DAU/MAU and user payment rates."
+          />
+
+          <Details
+            position="BD Director"
+            company="MOMO (NASDAQ)"
+            time="2016.08 - 2022.8"
+            address="Beijing, China"
+            companyLink="https://www.immomo.com"
+            work="Led strategic partnerships and business development for major social platform. Managed payment integrations with Alipay, WeChat Pay, PayPal, Visa, Stripe, and international providers. Developed Apple ecosystem relationships including WWDC attendance and App Store recommendations. Built VAS sales channels for MOMO Coin and VIP memberships, achieving over million growth in joint memberships. Established partnerships with 30+ industry companies including Apple, Baidu, Alibaba, Tencent."
+          />
+
+          <Details
+            position="Senior BD Manager"
+            company="SINA WEIBO (NASDAQ)"
+            time="2014.04 - 2016.08"
+            address="Beijing, China"
+            companyLink="https://weibo.com"
+            work="Managed strategic partnerships in vertical industries with major tech companies including Baidu, Alibaba, and Tencent. Key projects included Cortana/Satori AI integration for search intelligence, Alipay-Weibo payment foundation setup, VR industry research and investment evaluation, and DiDi product integration into Weibo client. Maintained relationships with key partners and explored new business opportunities."
           />
         </ul>
       </div>
@@ -86,10 +113,10 @@ const Experience = () => {
             md:p-2 md:px-4 md:text-base
              `}
         >
-          View Projects
+          View Achievements
         </Link>
         <Link
-          href="/articles/"
+          href="/contact/"
           target={"_self"}
           className={`flex items-center rounded-lg border-2 border-solid bg-dark p-2.5 px-6 text-lg font-semibold
             capitalize text-light hover:border-dark hover:bg-transparent hover:text-dark 
@@ -97,7 +124,7 @@ const Experience = () => {
             md:p-2 md:px-4 md:text-base
              `}
         >
-          View Articles
+          Contact Me
         </Link>
       </div>
     </div>

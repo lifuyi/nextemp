@@ -34,20 +34,65 @@ export const GithubIcon = ({ className, ...rest }) => (
   </svg>
 );
 
-export const TwitterIcon = ({ className, ...rest }) => (
+export const XIcon = ({ className, ...rest }) => (
   <svg
+    viewBox="-2.4 -2.4 28.80 28.80"
+    fill="none"
     xmlns="http://www.w3.org/2000/svg"
-    width="1em"
-    height="1em"
-    viewBox="0 0 256 209"
     {...rest}
     className={`w-full h-auto ${className}`}
   >
-    <path fill="none" d="M0 0h256v209H0z" />
-    <path
-      fill="#55acee"
-      d="M256 25.45a105.04 105.04 0 0 1-30.166 8.27c10.845-6.5 19.172-16.793 23.093-29.057a105.183 105.183 0 0 1-33.351 12.745C205.995 7.201 192.346.822 177.239.822c-29.006 0-52.523 23.516-52.523 52.52 0 4.117.465 8.125 1.36 11.97-43.65-2.191-82.35-23.1-108.255-54.876-4.52 7.757-7.11 16.78-7.11 26.404 0 18.222 9.273 34.297 23.365 43.716a52.312 52.312 0 0 1-23.79-6.57c-.003.22-.003.44-.003.661 0 25.447 18.104 46.675 42.13 51.5a52.592 52.592 0 0 1-23.718.9c6.683 20.866 26.08 36.05 49.062 36.475-17.975 14.086-40.622 22.483-65.228 22.483-4.24 0-8.42-.249-12.529-.734 23.243 14.902 50.85 23.597 80.51 23.597 96.607 0 149.434-80.031 149.434-149.435 0-2.278-.05-4.543-.152-6.795A106.748 106.748 0 0 0 256 25.45"
-    />
+    <g id="SVGRepo_bgCarrier" strokeWidth="0">
+      <rect
+        x="-2.4"
+        y="-2.4"
+        width="28.80"
+        height="28.80"
+        rx="14.4"
+        fill="#f5f5f5"
+        strokeWidth="0"
+      />
+    </g>
+    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" />
+    <g id="SVGRepo_iconCarrier">
+      <path
+        d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"
+        fill="#000000"
+      />
+    </g>
+  </svg>
+);
+
+export const FacebookIcon = ({ className, ...rest }) => (
+  <svg
+    viewBox="-2.4 -2.4 28.80 28.80"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    {...rest}
+    className={`w-full h-auto ${className}`}
+  >
+    <g id="SVGRepo_bgCarrier" strokeWidth="0">
+      <rect
+        x="-2.4"
+        y="-2.4"
+        width="28.80"
+        height="28.80"
+        rx="14.4"
+        fill="#f5f5f5"
+        strokeWidth="0"
+      />
+    </g>
+    <g id="SVGRepo_tracerCarrier" strokeLinecap="round" strokeLinejoin="round" />
+    <g id="SVGRepo_iconCarrier">
+      <path
+        d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"
+        fill="#1877F2"
+      />
+      <path
+        d="M16.671 15.543l.532-3.47h-3.328v-2.25c0-.949.465-1.874 1.956-1.874h1.513V4.996s-1.374-.235-2.686-.235c-2.741 0-4.533 1.662-4.533 4.669v2.642H7.078v3.47h3.047v8.385a12.118 12.118 0 003.75 0v-8.385h2.796z"
+        fill="#fff"
+      />
+    </g>
   </svg>
 );
 

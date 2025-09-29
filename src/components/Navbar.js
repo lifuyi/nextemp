@@ -3,9 +3,8 @@ import React, { useState } from "react";
 import Logo from "./Logo";
 import { useRouter } from "next/router";
 import {
-  MediumIcon,
-  DevIcon,
-  GithubIcon,
+  FacebookIcon,
+  XIcon,
   LinkedInIcon,
   MoonIcon,
   SunIcon,
@@ -109,8 +108,8 @@ const Navbar = () => {
         <nav className="flex items-center justify-center">
           <CustomLink className="mr-4" href="/" title="Home" />
           <CustomLink className="mx-4" href="/about" title="About" />
-          <CustomLink className="mx-4" href="/projects" title="Projects" />
-          <CustomLink className="ml-4" href="/articles" title="Articles" />
+          <CustomLink className="mx-4" href="/projects" title="Achievements" />
+          <CustomLink className="ml-4" href="/contact" title="Contact" />
         </nav>
         <nav
           className="flex items-center justify-center flex-wrap lg:mt-2
@@ -119,44 +118,36 @@ const Navbar = () => {
           <motion.a
             target={"_blank"}
             className="w-7 mr-3"
-            href="https://github.com/lilxyzz"
+            href="https://facebook.com/frank.li"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            aria-label="Checkout my GitHub profile"
+            aria-label="Connect on Facebook"
           >
-            <GithubIcon />
-          </motion.a>
-
-          <motion.a
-            target={"_blank"}
-            className="w-7 mx-3 bg-light rounded-full"
-            href="https://medium.com/@travis.lord"
-            whileHover={{ y: -2 }}
-            whileTap={{ scale: 0.9 }}
-            aria-label="Checkout my Medium profile"
-          >
-            <MediumIcon />
+            <FacebookIcon />
           </motion.a>
 
           <motion.a
             target={"_blank"}
             className="w-7 mx-3"
-            href="https://dev.to/lilxyzz"
+            href="https://x.com/frank_li"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            aria-label="Checkout my Dev.to profile"
+            aria-label="Follow on X"
           >
-            <DevIcon />
+            <XIcon />
           </motion.a>
 
           <motion.a
             target={"_blank"}
             className="w-7 mx-3"
-            href="https://dev.to/lilxyzz"
+            href="https://linkedin.com/in/frank-li"
             whileHover={{ y: -2 }}
             whileTap={{ scale: 0.9 }}
-            aria-label="My Dev.to profile"
-          ></motion.a>
+            aria-label="Connect on LinkedIn"
+          >
+            <LinkedInIcon />
+          </motion.a>
+
 
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
@@ -199,13 +190,7 @@ const Navbar = () => {
               toggle={handleClick}
               className="mx-4 lg:m-0 lg:my-2"
               href="/projects"
-              title="Projects"
-            />
-            <CustomMobileLink
-              toggle={handleClick}
-              className="ml-4 lg:m-0 lg:my-2"
-              href="/articles"
-              title="Articles"
+              title="Achievements"
             />
             <CustomMobileLink
               toggle={handleClick}

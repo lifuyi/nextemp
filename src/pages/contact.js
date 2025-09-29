@@ -48,10 +48,10 @@ export default function About() {
   return (
     <>
       <Head>
-        <title>NexTemp Built with Nextjs</title>
+        <title>Contact Frank Li</title>
         <meta
           name="description"
-          content="NexTemp, A open-source portfolio theme built with Nextjs"
+          content="Contact Frank Li for business development opportunities, strategic partnerships, and international business collaborations"
         />
       </Head>
 
@@ -61,8 +61,7 @@ export default function About() {
       >
         <Layout className="pt-16">
           <AnimatedText
-            text="Begin Today,
-I'm One Message Away 👋"
+            text="Let's Build Strategic Partnerships Together 🤝"
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
           />
 
@@ -75,9 +74,10 @@ I'm One Message Away 👋"
 
               <div className="w-full"></div>
               <p className="">
-                My inbox is always open. Whether you have a question or just
-                want to say hello, I'll try my best to get back to you! Feel
-                free to message me about any relevant project updates.
+                My inbox is always open for business development opportunities, strategic partnerships, 
+                and international collaborations. Whether you're looking to expand into new markets, 
+                develop payment solutions, or explore technical partnerships, I'd love to hear from you! 
+                Let's discuss how we can create mutual value and drive growth together.
               </p>
             </div>
             <div className="relative col-span-4 h-max xl:col-span-4 md:col-span-8 md:order-2">

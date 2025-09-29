@@ -231,10 +231,10 @@ export default function Projects() {
   return (
     <>
       <Head>
-        <title>Projects | By NexTemp</title>
+        <title>Business Achievements | Frank Li</title>
         <meta
           name="description"
-          content="NexTemp, A open-source portfolio theme built with Nextjs"
+          content="Frank Li's business achievements in strategic partnerships, fintech, and international business development"
         />
       </Head>
 
@@ -244,42 +244,42 @@ export default function Projects() {
       >
         <Layout className="pt-16">
           <AnimatedText
-            text="Imagination Transforms the World ✨"
+            text="Strategic Partnerships Drive Success 🚀"
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
               <FeaturedProject
-                type="Design & Development"
-                tools="HTML | CSS | JavaScript | Gatsby"
-                title="Clay - Gatsby Theme"
-                summary="Image-centric Gatsby theme for publishers, portfolio, photographers blogs and more."
+                type="Strategic Partnership"
+                tools="Business Development | International Markets | Payment Systems"
+                title="MOMO Global Payment Integration"
+                summary="Led strategic partnerships with major payment providers including Alipay, WeChat Pay, PayPal, Visa, and Stripe. Successfully integrated 10+ international payment solutions, contributing to millions in revenue growth for NASDAQ-listed social platform."
                 img={proj1}
-                date="2023"
-                link="/projects/clay-gatsby-theme"
-                github="https://travislord.xyz/projects/clay-gatsby-theme"
+                date="2016-2022"
+                link="#"
+                github="#"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Design & Development"
-                tools="HTML | CSS | JavaScript | Gatsby"
-                title="Clay - Gatsby Theme"
+                type="Market Expansion"
+                tools="Fintech | Digital Banking | European Markets"
+                title="PAYTEND European Expansion"
                 img={proj1}
-                date="2023"
-                link="/projects/clay-gatsby-theme"
-                github="https://travislord.xyz/projects/clay-gatsby-theme"
+                date="2022-2023"
+                link="#"
+                github="#"
               />
             </div>
             <div className="col-span-6 sm:col-span-12">
               <Project
-                type="Design & Development"
-                tools="HTML | CSS | JavaScript | Gatsby"
-                title="Clay - Gatsby Theme"
+                type="Data Partnerships"
+                tools="Mobile Manufacturing | Automotive | IoT"
+                title="Huawei & Automotive Partnerships"
                 img={proj1}
                 date="2023"
-                link="/projects/clay-gatsby-theme"
-                github="https://travislord.xyz/projects/clay-gatsby-theme"
+                link="#"
+                github="#"
               />
             </div>
           </div>
@@ -287,17 +287,17 @@ export default function Projects() {
           <div>
             <ul className="flex flex-col items-center relative pt-16">
               <Article
-                title="Adding more soon, thanks for the interest!"
+                title="15+ Years of Strategic Partnerships & Business Growth"
                 img={loading}
-                time="1 min read"
-                date=""
-                link="https://github.com/lilxyzz/"
+                time="Career Highlights"
+                date="2008-2023"
+                link="#"
               />
             </ul>
 
             <div className="mt-2 flex items-center justify-between gap-3 grid-cols-2">
               <Link
-                href="/articles/"
+                href="/contact/"
                 target={"_self"}
                 className={`flex items-center rounded-lg border-2 border-solid bg-light p-2.5 px-6 text-lg font-semibold
             capitalize text-dark hover:border-light hover:bg-dark hover:text-light 
@@ -305,7 +305,7 @@ export default function Projects() {
             md:p-2 md:px-4 md:text-base
              `}
               >
-                View Articles
+                Contact Me
               </Link>
               <Link
                 href="/about/"
@@ -316,7 +316,7 @@ export default function Projects() {
             md:p-2 md:px-4 md:text-base
              `}
               >
-                Get To Know Me
+                About Me
               </Link>
             </div>
             <HireMe2 />
