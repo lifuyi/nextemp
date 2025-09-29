@@ -43,7 +43,7 @@ export default function Home() {
                 gradient={true}
               />
               <div className="flex w-1/2 w-full items-center items-start lg:w-full  lg:!justify-center  sm:!justify-center  md:!text-center md:inline-block md:w-full">
-                <h2 className="animate-text bg-gradient-to-r from-lightGreen via-lightGreen to-slideGreen bg-clip-text text-transparent font-semibold capitalize !text-5xl xl:!text-4xl lg:!text-4xl md:!text-5xl sm:!text-3xl">
+                <h2 className="animate-text bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 bg-clip-text text-transparent font-semibold capitalize !text-5xl xl:!text-4xl lg:!text-4xl md:!text-5xl sm:!text-3xl">
                   I drive business growth through strategic partnerships.
                 </h2>
               </div>
@@ -53,13 +53,13 @@ export default function Home() {
                 With 15+ years of experience in business development and strategic partnerships with global tech companies, 
                 I combine technical expertise with business acumen to drive innovation in AI and software solutions.
               </p>
-              <div className="mt-2 flex items-center self-start gap-3 grid-cols-3 lg:self-center lg:grid lg:grid-cols-1">
+              <div className="mt-2 flex items-center self-start gap-3 lg:self-center lg:grid lg:grid-cols-1">
                 <Link
                   href="/about/"
                   target={"_self"}
-                  className={`apple-button flex items-center p-3 px-8 text-lg font-semibold
+                  className={`apple-button flex items-center justify-center h-12 px-8 text-lg font-semibold
             capitalize text-white hover:scale-105 hover:shadow-apple-lg 
-            md:p-2.5 md:px-6 md:text-base transition-all duration-300
+            md:h-10 md:px-6 md:text-base transition-all duration-300
              `}
                 >
                   About Me
@@ -67,9 +67,9 @@ export default function Home() {
                 <Link
                   href="/projects/"
                   target={"_self"}
-                  className={`flex items-center apple-card p-3 px-8 text-lg font-semibold
-            capitalize text-appleBlue hover:scale-105 hover:shadow-apple-lg border-0
-            md:p-2.5 md:px-6 md:text-base transition-all duration-300
+                  className={`apple-button flex items-center justify-center h-12 px-8 text-lg font-semibold
+            capitalize text-white hover:scale-105 hover:shadow-apple-lg 
+            md:h-10 md:px-6 md:text-base transition-all duration-300
              `}
                 >
                   Achievements
@@ -77,12 +77,12 @@ export default function Home() {
                 <Link
                   href="/gallery/"
                   target={"_self"}
-                  className={`flex items-center apple-card p-3 px-8 text-lg font-semibold
-            capitalize text-appleGreen hover:scale-105 hover:shadow-apple-lg border-0
-            md:p-2.5 md:px-6 md:text-base transition-all duration-300
+                  className={`apple-button flex items-center justify-center h-12 px-8 text-lg font-semibold
+            capitalize text-white hover:scale-105 hover:shadow-apple-lg 
+            md:h-10 md:px-6 md:text-base transition-all duration-300
              `}
                 >
-                  📸 Gallery
+                  Gallery
                 </Link>
               </div>
             </div>

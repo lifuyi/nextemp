@@ -8,7 +8,7 @@ const quote = {
   visible: {
     opacity: 1,
     transition: {
-      delay: 0.5,
+      delay: 0.1,
       staggerChildren: 0.08,
     },
   },
@@ -23,15 +23,15 @@ const singleWord = {
     opacity: 1,
     y: 0,
     transition: {
-      duration: 1,
+      duration: 0.5,
     },
   },
 };
 
 const AnimatedText = ({ text, className = "", gradient = false }) => {
-  // Default gradient colors - Apple-like blue to green
+  // Enhanced gradient with more obvious blue transitions
   const gradientClasses = gradient 
-    ? "bg-gradient-to-r from-appleBlue via-appleBlue to-appleGreen bg-clip-text text-transparent" 
+    ? "bg-gradient-to-r from-blue-600 via-blue-400 to-blue-600 bg-clip-text text-transparent animate-gradient" 
     : "";
     
   return (

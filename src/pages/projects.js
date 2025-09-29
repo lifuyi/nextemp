@@ -131,7 +131,7 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
           {tools}
         </span>
         <Link href={link} className="underline-offset-2 hover:underline">
-          <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-3xl xs:text-2xl bg-gradient-to-r from-appleBlue to-appleGreen bg-clip-text text-transparent">
+          <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-3xl xs:text-2xl bg-gradient-to-r from-appleBlue via-appleGreen to-appleBlue bg-clip-text text-transparent animate-gradient">
             {title}
           </h2>
         </Link>
@@ -203,7 +203,7 @@ const Project = ({ title, type, img, link, tools }) => {
         </span>
 
         <Link href={link} className="underline-offset-2 hover:underline">
-          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl bg-gradient-to-r from-appleBlue to-appleGreen bg-clip-text text-transparent">
+          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl bg-gradient-to-r from-appleBlue via-appleGreen to-appleBlue bg-clip-text text-transparent animate-gradient">
             {title}
           </h2>
         </Link>

@@ -54,11 +54,13 @@ textarea, input {
 
 /* Apple-style buttons */
 .apple-button {
-  background: linear-gradient(135deg, #007AFF 0%, #0056CC 100%);
+  background: linear-gradient(135deg, #007AFF 0%, #007AFF 50%, #0056CC 100%);
   border-radius: var(--apple-radius-sm);
   box-shadow: 0 4px 16px rgba(0,122,255,0.3);
   backdrop-filter: var(--apple-blur);
   transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  background-size: 200% 200%;
+  animation: gradientShift 3s ease infinite;
 }
 
 .apple-button:hover {
@@ -83,6 +85,25 @@ textarea, input {
 /* Smooth transitions */
 * {
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+/* Gradient animation */
+@keyframes gradientShift {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* Text gradient animation */
+.animate-gradient {
+  background-size: 200% 200%;
+  animation: gradientShift 4s ease infinite;
 }
 
 /* Horizontal Scrolling Gallery */

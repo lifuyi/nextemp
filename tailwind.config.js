@@ -51,6 +51,13 @@ module.exports = {
           "repeating-radial-gradient(rgba(0,0,0,0.08) 2px,#ffffff 5px,#ffffff 40px)",
         circularDarkSm:
           "repeating-radial-gradient(rgba(255,255,255,0.08) 2px,#000000 8px,#000000 40px)",
+        // Enhanced gradient backgrounds
+        appleGradientBlueToGreen: "linear-gradient(135deg, #007AFF 0%, #34C759 100%)",
+        appleGradientBlueToPurple: "linear-gradient(135deg, #007AFF 0%, #AF52DE 100%)",
+        appleGradientWarm: "linear-gradient(135deg, #FF9500 0%, #FF3B30 100%)",
+        appleGradientCool: "linear-gradient(135deg, #5AC8FA 0%, #007AFF 100%)",
+        appleGradientText: "linear-gradient(135deg, #007AFF 0%, #34C759 50%, #AF52DE 100%)",
+        appleGradientSubtle: "linear-gradient(135deg, #007AFF 0%, #34C759 30%, #5AC8FA 100%)",
       },
       boxShadow: {
         "3xl": "0 15px 15px 1px rgba(0,122,255, 0.4)",

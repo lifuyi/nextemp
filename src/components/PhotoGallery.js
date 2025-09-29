@@ -44,7 +44,7 @@ const PhotoGallery = ({ photos = [] }) => {
   return (
     <>
       <div className="my-32">
-        <h2 className="font-bold text-8xl mb-16 w-full text-center md:text-6xl xs:text-4xl md:mb-8 bg-gradient-to-r from-appleBlue to-appleGreen bg-clip-text text-transparent">
+        <h2 className="font-bold text-8xl mb-16 w-full text-center md:text-6xl xs:text-4xl md:mb-8 bg-gradient-to-r from-appleBlue via-appleGreen to-appleBlue bg-clip-text text-transparent animate-gradient">
           Photo Gallery
         </h2>
         
@@ -93,7 +93,7 @@ const PhotoGallery = ({ photos = [] }) => {
                       
                       {/* Photo Info - Always Visible */}
                       <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                        <h3 className="font-semibold text-lg leading-tight mb-1 drop-shadow-lg bg-gradient-to-r from-white to-appleSecondary bg-clip-text text-transparent">
+                        <h3 className="font-semibold text-lg leading-tight mb-1 drop-shadow-lg bg-gradient-to-r from-white via-appleSecondary to-white bg-clip-text text-transparent">
                           {photo.title || `Photo ${index + 1}`}
                         </h3>
                         {photo.description && (
@@ -242,7 +242,7 @@ const PhotoGallery = ({ photos = [] }) => {
                   transition={{ delay: 0.2 }}
                 >
                   {selectedPhoto.title && (
-                    <h3 className="text-2xl font-bold mb-3 leading-tight bg-gradient-to-r from-white to-appleSecondary bg-clip-text text-transparent">
+                    <h3 className="text-2xl font-bold mb-3 leading-tight bg-gradient-to-r from-white via-appleSecondary to-white bg-clip-text text-transparent">
                       {selectedPhoto.title}
                     </h3>
                   )}
