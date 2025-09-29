@@ -28,7 +28,12 @@ const singleWord = {
   },
 };
 
-const AnimatedText = ({ text, className = "" }) => {
+const AnimatedText = ({ text, className = "", gradient = false }) => {
+  // Default gradient colors - Apple-like blue to green
+  const gradientClasses = gradient 
+    ? "bg-gradient-to-r from-appleBlue via-appleBlue to-appleGreen bg-clip-text text-transparent" 
+    : "";
+    
   return (
     <div
       className="py-2 w-full mx-auto flex flex-col items-center justify-center  text-center  
@@ -36,7 +41,7 @@ const AnimatedText = ({ text, className = "" }) => {
     >
       <motion.h1
         className={`inline-block text-dark dark:text-light
-      text-8xl font-bold w-full capitalize  ${className} xl:text-6xl`}
+      text-8xl font-bold w-full capitalize ${gradientClasses} ${className} xl:text-6xl`}
         variants={quote}
         initial="hidden"
         animate="visible"
@@ -48,7 +53,7 @@ const AnimatedText = ({ text, className = "" }) => {
               key={char + "-" + index}
               variants={singleWord}
             >
-              {char}&nbsp;
+              {char} 
             </motion.span>
           );
         })}

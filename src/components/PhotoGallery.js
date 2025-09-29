@@ -10,10 +10,13 @@ const PhotoGallery = ({ photos = [] }) => {
   const x = useMotionValue(0);
 
   const openModal = (photo, index) => {
-    if (!isDragging) {
-      setSelectedPhoto(photo);
-      setSelectedIndex(index);
-    }
+    // Add a small delay to distinguish between drag and click
+    setTimeout(() => {
+      if (!isDragging) {
+        setSelectedPhoto(photo);
+        setSelectedIndex(index);
+      }
+    }, 50);
   };
 
   const closeModal = () => {
@@ -41,7 +44,7 @@ const PhotoGallery = ({ photos = [] }) => {
   return (
     <>
       <div className="my-32">
-        <h2 className="font-bold text-8xl mb-16 w-full text-center md:text-6xl xs:text-4xl md:mb-8">
+        <h2 className="font-bold text-8xl mb-16 w-full text-center md:text-6xl xs:text-4xl md:mb-8 bg-gradient-to-r from-appleBlue to-appleGreen bg-clip-text text-transparent">
           Photo Gallery
         </h2>
         
@@ -57,8 +60,8 @@ const PhotoGallery = ({ photos = [] }) => {
                 dragConstraints={constraintsRef}
                 dragElastic={0.1}
                 onDragStart={() => setIsDragging(true)}
-                onDragEnd={() => setTimeout(() => setIsDragging(false), 100)}
-                className="flex gap-6 cursor-grab active:cursor-grabbing"
+                onDragEnd={() => setTimeout(() => setIsDragging(false), 150)}
+                className={`flex gap-6 ${isDragging ? 'cursor-grabbing' : 'cursor-grab'}`}
                 style={{ x }}
                 whileTap={{ cursor: "grabbing" }}
               >
@@ -90,7 +93,7 @@ const PhotoGallery = ({ photos = [] }) => {
                       
                       {/* Photo Info - Always Visible */}
                       <div className="absolute bottom-0 left-0 right-0 p-4 text-white">
-                        <h3 className="font-semibold text-lg leading-tight mb-1 drop-shadow-lg">
+                        <h3 className="font-semibold text-lg leading-tight mb-1 drop-shadow-lg bg-gradient-to-r from-white to-appleSecondary bg-clip-text text-transparent">
                           {photo.title || `Photo ${index + 1}`}
                         </h3>
                         {photo.description && (
@@ -239,7 +242,7 @@ const PhotoGallery = ({ photos = [] }) => {
                   transition={{ delay: 0.2 }}
                 >
                   {selectedPhoto.title && (
-                    <h3 className="text-white text-2xl font-bold mb-3 leading-tight">
+                    <h3 className="text-2xl font-bold mb-3 leading-tight bg-gradient-to-r from-white to-appleSecondary bg-clip-text text-transparent">
                       {selectedPhoto.title}
                     </h3>
                   )}

@@ -4,67 +4,37 @@ import AnimatedText from "@/components/AnimatedText";
 import TransitionEffect from "@/components/TransitionEffect";
 import PhotoGallery from "@/components/PhotoGallery";
 
-// Working photos data - replace with actual photos
+// Working photos data - using actual existing images
 const workingPhotos = [
   {
-    src: "/images/gallery/work-1.jpg",
-    alt: "Frank Li presenting at Chinida.com launch",
-    title: "Chinida.com Launch Event",
-    description: "Presenting our AI coding platform to investors and partners"
+    src: "/images/profile/Riley.png",
+    alt: "Profile Photo",
+    title: "Professional Profile",
+    description: "Professional headshot for business use"
   },
   {
-    src: "/images/gallery/work-2.jpg", 
-    alt: "Business meeting with international partners",
-    title: "International Partnership Meeting",
-    description: "Negotiating strategic partnerships with European fintech companies"
+    src: "/images/projects/clay-theme.png",
+    alt: "Clay Theme Project",
+    title: "Clay Gatsby Theme",
+    description: "A beautiful Gatsby theme for developers and designers"
   },
   {
-    src: "/images/gallery/work-3.jpg",
-    alt: "Frank Li at MOMO headquarters",
-    title: "MOMO Leadership Team",
-    description: "Leading business development initiatives at MOMO (NASDAQ)"
+    src: "/images/articles/Clay-Gatsby-theme.webp",
+    alt: "Clay Gatsby Theme Screenshot",
+    title: "Theme Development",
+    description: "Creating beautiful themes with modern web technologies"
   },
   {
-    src: "/images/gallery/work-4.jpg",
-    alt: "Tech conference presentation",
-    title: "Industry Conference Speaker",
-    description: "Sharing insights on mobile payment innovations and partnerships"
+    src: "/images/articles/GTA6-VICE.gif",
+    alt: "GTA6 VICE Game Preview",
+    title: "Game Development Interest",
+    description: "Following the latest in game development and design"
   },
   {
-    src: "/images/gallery/work-5.jpg",
-    alt: "Team collaboration session",
-    title: "Strategy Planning Session",
-    description: "Collaborating with technical teams on product development"
-  },
-  {
-    src: "/images/gallery/work-6.jpg",
-    alt: "Office workspace",
-    title: "Daily Work Environment",
-    description: "Managing multiple projects and international partnerships"
-  },
-  {
-    src: "/images/gallery/work-7.jpg",
-    alt: "Signing partnership agreement",
-    title: "Partnership Signing Ceremony",
-    description: "Finalizing strategic partnership with major automotive manufacturer"
-  },
-  {
-    src: "/images/gallery/work-8.jpg",
-    alt: "Team building event",
-    title: "Team Building & Strategy",
-    description: "Building strong teams for international market expansion"
-  },
-  {
-    src: "/images/gallery/work-9.jpg",
-    alt: "Product demo presentation",
-    title: "Product Demonstration",
-    description: "Showcasing Chinida.com's AI coding capabilities to potential clients"
-  },
-  {
-    src: "/images/gallery/work-10.jpg",
-    alt: "Industry networking event",
-    title: "Industry Networking",
-    description: "Building relationships at major technology conferences"
+    src: "/images/articles/My-MacBook-Setup-For-Development-2024.webp",
+    alt: "Development Setup",
+    title: "Development Environment",
+    description: "Optimized setup for efficient coding and development work"
   }
 ];
 
@@ -85,6 +55,7 @@ export default function Gallery() {
           <AnimatedText
             text="Professional Journey in Pictures 📸"
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
+            gradient={true}
           />
           
           <div className="w-full mb-16">

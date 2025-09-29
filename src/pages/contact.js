@@ -63,12 +63,13 @@ export default function About() {
           <AnimatedText
             text="Let's Build Strategic Partnerships Together 🤝"
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
+            gradient={true}
           />
 
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8 relative flex w-full flex-col items-center justify-center rounded-2xl rounded-br-2xl border border-solid border-dark bg-light p-6 shadow-2xl dark:border-light dark:bg-dark xs:p-4">
             <div className="absolute top-0 -right-5 -z-10 h-[103%] w-[101.5%] rounded-[2rem] rounded-br-3xl bg-dark dark:bg-light md:-right-2 md:w-[101%] xs:h-[102%] xs:rounded-[1.5rem]" />
             <div className="col-span-4 flex flex-col items-start justify-start xl:col-span-4 md:order-1 md:col-span-8">
-              <h2 className="my-4 text-2xl font-bold capitalize text-primaryDark dark:text-primaryDark">
+              <h2 className="my-4 text-2xl font-bold capitalize bg-gradient-to-r from-appleBlue to-appleGreen bg-clip-text text-transparent">
                 What’s Next?
               </h2>
 

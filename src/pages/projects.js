@@ -131,7 +131,7 @@ lg:p-8 xs:rounded-2xl  xs:rounded-br-3xl xs:p-4
           {tools}
         </span>
         <Link href={link} className="underline-offset-2 hover:underline">
-          <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-3xl xs:text-2xl">
+          <h2 className="my-2 w-full text-left text-4xl font-bold lg:text-3xl xs:text-2xl bg-gradient-to-r from-appleBlue to-appleGreen bg-clip-text text-transparent">
             {title}
           </h2>
         </Link>
@@ -203,7 +203,7 @@ const Project = ({ title, type, img, link, tools }) => {
         </span>
 
         <Link href={link} className="underline-offset-2 hover:underline">
-          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl ">
+          <h2 className="my-2 w-full text-left text-3xl font-bold lg:text-2xl bg-gradient-to-r from-appleBlue to-appleGreen bg-clip-text text-transparent">
             {title}
           </h2>
         </Link>
@@ -246,6 +246,7 @@ export default function Projects() {
           <AnimatedText
             text="Strategic Partnerships Drive Success 🚀"
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:mb-8 sm:!text-6xl xs:!text-4xl"
+            gradient={true}
           />
           <div className="grid grid-cols-12 gap-24 gap-y-32 xl:gap-x-16 lg:gap-x-8 md:gap-y-24 sm:gap-x-0">
             <div className="col-span-12">
@@ -289,8 +290,7 @@ export default function Projects() {
               <Article
                 title="15+ Years of Strategic Partnerships & Business Growth"
                 img={loading}
-                time="Career Highlights"
-                date="2008-2023"
+                date="Career Highlights"
                 link="#"
               />
             </ul>

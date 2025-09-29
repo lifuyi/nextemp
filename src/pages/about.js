@@ -35,43 +35,43 @@ function AnimatedNumberFramerMotion({ value }) {
   return <span ref={ref} />;
 }
 
-// Sample working photos - replace with actual photo data
+// Sample working photos - using actual existing images
 const workingPhotos = [
   {
-    src: "/images/gallery/work-1.jpg",
-    alt: "Frank Li presenting at Chinida.com launch",
-    title: "Chinida.com Launch Event",
-    description: "Presenting our AI coding platform to investors and partners"
+    src: "/images/profile/Riley.png",
+    alt: "Profile Photo",
+    title: "Professional Profile",
+    description: "Professional headshot for business use"
   },
   {
-    src: "/images/gallery/work-2.jpg", 
-    alt: "Business meeting with international partners",
-    title: "International Partnership Meeting",
-    description: "Negotiating strategic partnerships with European fintech companies"
+    src: "/images/projects/clay-theme.png",
+    alt: "Clay Theme Project",
+    title: "Clay Gatsby Theme",
+    description: "A beautiful Gatsby theme for developers and designers"
   },
   {
-    src: "/images/gallery/work-3.jpg",
-    alt: "Frank Li at MOMO headquarters",
-    title: "MOMO Leadership Team",
-    description: "Leading business development initiatives at MOMO (NASDAQ)"
+    src: "/images/articles/Clay-Gatsby-theme.webp",
+    alt: "Clay Gatsby Theme Screenshot",
+    title: "Theme Development",
+    description: "Creating beautiful themes with modern web technologies"
   },
   {
-    src: "/images/gallery/work-4.jpg",
-    alt: "Tech conference presentation",
-    title: "Industry Conference Speaker",
-    description: "Sharing insights on mobile payment innovations and partnerships"
+    src: "/images/articles/GTA6-VICE.gif",
+    alt: "GTA6 VICE Game Preview",
+    title: "Game Development Interest",
+    description: "Following the latest in game development and design"
   },
   {
-    src: "/images/gallery/work-5.jpg",
-    alt: "Team collaboration session",
-    title: "Strategy Planning Session",
-    description: "Collaborating with technical teams on product development"
+    src: "/images/articles/My-MacBook-Setup-For-Development-2024.webp",
+    alt: "Development Setup",
+    title: "Development Environment",
+    description: "Optimized setup for efficient coding and development work"
   },
   {
-    src: "/images/gallery/work-6.jpg",
-    alt: "Office workspace",
-    title: "Daily Work Environment",
-    description: "Managing multiple projects and international partnerships"
+    src: "/images/projects/clay-theme.png",
+    alt: "Project Showcase",
+    title: "Project Development",
+    description: "Showcasing development work and technical projects"
   }
 ];
 
@@ -94,6 +94,7 @@ export default function About() {
           <AnimatedText
             text="Driving Growth Through Strategic Partnerships 🚀"
             className="mb-16 !text-8xl !leading-tight lg:!text-7xl sm:!text-6xl xs:!text-4xl sm:mb-8"
+            gradient={true}
           />
 
           <div className="grid w-full grid-cols-8 gap-16 sm:gap-8">
