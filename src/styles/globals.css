@@ -8,7 +8,37 @@
   --apple-radius: 20px;
   --apple-radius-sm: 12px;
   --apple-radius-lg: 28px;
+  --apple-blue: #007AFF;
+  --apple-green: #34C759;
+  --apple-orange: #FF9500;
+  --apple-red: #FF3B30;
+  --apple-purple: #AF52DE;
+  --apple-pink: #FF2D55;
+  --apple-yellow: #FFCC00;
+  --apple-gray: #8E8E93;
+  --apple-secondary: #636366;
 }
+
+/* Apple color utility classes */
+.text-appleBlue { color: var(--apple-blue); }
+.text-appleGreen { color: var(--apple-green); }
+.text-appleOrange { color: var(--apple-orange); }
+.text-appleRed { color: var(--apple-red); }
+.text-applePurple { color: var(--apple-purple); }
+.text-applePink { color: var(--apple-pink); }
+.text-appleYellow { color: var(--apple-yellow); }
+.text-appleGray { color: var(--apple-gray); }
+.text-appleSecondary { color: var(--apple-secondary); }
+
+.bg-appleBlue { background-color: var(--apple-blue); }
+.bg-appleGreen { background-color: var(--apple-green); }
+.bg-appleOrange { background-color: var(--apple-orange); }
+.bg-appleRed { background-color: var(--apple-red); }
+.bg-applePurple { background-color: var(--apple-purple); }
+.bg-applePink { background-color: var(--apple-pink); }
+.bg-appleYellow { background-color: var(--apple-yellow); }
+.bg-appleGray { background-color: var(--apple-gray); }
+.bg-appleSecondary { background-color: var(--apple-secondary); }
 
 /* Projects and Articles image styling */
 img.h-auto.w-full {
