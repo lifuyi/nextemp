@@ -1,104 +1,45 @@
 import { motion } from "framer-motion";
 import React from "react";
 
-const quote = {
-  hidden: {
-    opacity: 1,
-  },
-  visible: {
-    opacity: 1,
-    transition: {
-      delay: 0,
-      staggerChildren: 0.08,
-    },
-  },
-};
-
-const singleWord = {
-  hidden: {
-    opacity: 0.2,
-    y: 20,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    transition: {
-      duration: 0.4,
-    },
-  },
-};
-
-const gradientWord = {
-  hidden: {
-    opacity: 1,
-    y: 20,
-    scale: 0.95,
-  },
-  visible: {
-    opacity: 1,
-    y: 0,
-    scale: 1,
-    transition: {
-      duration: 0.4,
-    },
-  },
-};
-
 const AnimatedText = ({ text, className = "", gradient = false }) => {
-  // Apple-like gradient animation
-  const gradientClasses = gradient 
-    ? "bg-gradient-to-r from-appleBlue via-appleGreen to-appleBlue bg-clip-text text-transparent animate-gradient" 
-    : "";
-    
   // Special handling for "Frank Li" to keep it on one line
   const isFrankLi = text.includes("Frank Li");
   
-  // Choose the right animation variant
-  const wordVariants = gradient ? gradientWord : singleWord;
-  
   return (
     <div
-      className="py-2 w-full mx-auto flex flex-col items-center justify-center  text-center  
-    overflow-hidden sm:py-0"
+      className="py-2 w-full mx-auto flex flex-col items-center justify-center text-center overflow-hidden sm:py-0"
     >
-      <motion.h1
-        className={`inline-block ${gradient ? gradientClasses : 'text-dark dark:text-light'}
-      text-8xl font-bold w-full capitalize ${className} xl:text-6xl`}
-        variants={quote}
-        initial="hidden"
-        animate="visible"
+      <h1
+        className={`inline-block text-dark dark:text-light text-8xl font-bold w-full capitalize ${className} xl:text-6xl`}
+        style={gradient ? {
+          background: 'linear-gradient(to right, #007AFF, #34C759, #007AFF)',
+          backgroundClip: 'text',
+          WebkitBackgroundClip: 'text',
+          WebkitTextFillColor: 'transparent',
+          backgroundSize: '200% 200%',
+          animation: 'gradientShift 4s ease infinite'
+        } : {}}
       >
         {isFrankLi ? (
           // Keep "Frank Li" together on one line
           <>
-            <motion.span
-              className="inline-block"
-              variants={wordVariants}
-            >
-              Hey, I'm 
-            </motion.span>
-            <motion.span
-              className="inline-block"
-              variants={wordVariants}
-            >
-              Frank Li
-            </motion.span>
+            <span className="inline-block">Hey, I'm&nbsp;</span>
+            <span className="inline-block">Frank Li</span>
           </>
         ) : (
           // Normal word splitting for other texts
-          text.split(" ").map((char, index) => {
+          text.split(" ").map((word, index) => {
             return (
-              <motion.span
+              <span
                 className="inline-block"
-                key={char + "-" + index}
-                variants={wordVariants}
+                key={word + "-" + index}
               >
-                {char} 
-              </motion.span>
+                {word}&nbsp;
+              </span>
             );
           })
         )}
-      </motion.h1>
+      </h1>
     </div>
   );
 };

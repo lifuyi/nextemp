@@ -29,6 +29,9 @@ module.exports = {
         appleGreen: "#34C759",
         appleOrange: "#FF9500",
         appleRed: "#FF3B30",
+        // Add gradient color stops for proper from/via/to usage
+        "blue-500": "#007AFF",
+        "green-500": "#34C759",
       },
       animation: {
         "spin-slow": "spin 8s linear infinite",
