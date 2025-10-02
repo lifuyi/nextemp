@@ -10,8 +10,12 @@ import Script from "next/script";
 import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
 
-// Inter is a more condensed, modern font that appears flatter
-const inter = Inter({ subsets: ["latin"], variable: "--font-mont" });
+// Inter with specific weights for flatter, system-like appearance
+const inter = Inter({ 
+  subsets: ["latin"], 
+  variable: "--font-mont",
+  weight: ["300", "400", "500", "600", "700"]
+});
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
