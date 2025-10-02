@@ -1,20 +1,18 @@
 import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
-import ErrorBoundary from "@/components/ErrorBoundary";
 import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
-import { Inter } from "next/font/google";
+import { Montserrat } from "next/font/google";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
 
-// Inter with specific weights for flatter, system-like appearance
-const inter = Inter({ 
+// Montserrat font configuration
+const montserrat = Montserrat({ 
   subsets: ["latin"], 
-  variable: "--font-mont",
-  weight: ["300", "400", "500", "600", "700"]
+  variable: "--font-mont"
 });
 
 export default function App({ Component, pageProps }) {
@@ -61,16 +59,13 @@ export default function App({ Component, pageProps }) {
         }}
       />
       <main
-        className={`${inter.variable} font-mont bg-gradient-to-br from-light/90 via-light to-appleGray/20 
-        dark:from-light/5 dark:via-light/2 dark:to-appleGray/5 w-full min-h-screen h-full`}
+        className={`${montserrat.variable} font-mont bg-light dark:bg-dark w-full min-h-screen h-full`}
       >
-        <ErrorBoundary>
-          <Navbar />
-          <AnimatePresence initial={false} mode="wait">
-            <Component key={router.asPath} {...pageProps} />
-          </AnimatePresence>
-          <Footer />
-        </ErrorBoundary>
+        <Navbar />
+        <AnimatePresence initial={false} mode="wait">
+          <Component key={router.asPath} {...pageProps} />
+        </AnimatePresence>
+        <Footer />
       </main>
     </>
   );
