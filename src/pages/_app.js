@@ -57,7 +57,8 @@ export default function App({ Component, pageProps }) {
         }}
       />
       <main
-        className={`${montserrat.variable} font-mont  bg-light dark:bg-dark w-full min-h-screen h-full`}
+        className={`${montserrat.variable} font-mont bg-gradient-to-br from-light/90 via-light to-appleGray/20 
+        dark:from-light/5 dark:via-light/2 dark:to-appleGray/5 w-full min-h-screen h-full`}
       >
         <ErrorBoundary>
           <Navbar />

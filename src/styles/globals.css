@@ -17,6 +17,8 @@
   --apple-yellow: #FFCC00;
   --apple-gray: #8E8E93;
   --apple-secondary: #636366;
+  --apple-text-dark: #1C1C1E;
+  --apple-text-light: #F2F2F7;
 }
 
 /* Apple color utility classes */
@@ -29,6 +31,8 @@
 .text-appleYellow { color: var(--apple-yellow); }
 .text-appleGray { color: var(--apple-gray); }
 .text-appleSecondary { color: var(--apple-secondary); }
+.text-appleTextDark { color: var(--apple-text-dark); }
+.text-appleTextLight { color: var(--apple-text-light); }
 
 .bg-appleBlue { background-color: var(--apple-blue); }
 .bg-appleGreen { background-color: var(--apple-green); }
@@ -39,6 +43,8 @@
 .bg-appleYellow { background-color: var(--apple-yellow); }
 .bg-appleGray { background-color: var(--apple-gray); }
 .bg-appleSecondary { background-color: var(--apple-secondary); }
+.bg-appleTextDark { background-color: var(--apple-text-dark); }
+.bg-appleTextLight { background-color: var(--apple-text-light); }
 
 /* Projects and Articles image styling */
 img.h-auto.w-full {
@@ -112,6 +118,12 @@ textarea, input {
   border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
+/* Main content styling */
+.main-content {
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
 /* Smooth transitions */
 * {
   transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
@@ -171,4 +183,11 @@ textarea, input {
 .thumbnail-strip {
   backdrop-filter: saturate(180%) blur(20px);
   -webkit-backdrop-filter: saturate(180%) blur(20px);
+}
+
+/* Content section styling */
+.content-section {
+  border-radius: var(--apple-radius);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
 }

@@ -6,23 +6,20 @@ const Footer = () => {
   return (
     <footer
       className="w-full border-t-0 border-solid border-dark
-    font-base text-lg dark:text-light dark:border-light sm:text-base
+    font-base text-sm text-appleSecondary dark:text-light dark:border-light sm:text-xs
     "
     >
-      <Layout className="py-8 flex items-center justify-center lg:flex-col lg:py-6">
-        <span>&copy; {new Date().getFullYear()}</span>
-
-        <div className="flex items-center lg:py-2 ml-2">
-          Contact: <span className="text-2xl px-1"></span>
-          {""}
-          &nbsp;
+      <Layout className="py-8 flex items-center justify-center lg:py-6">
+        <div className="flex items-center flex-wrap justify-center text-center">
+          <span>&copy; {new Date().getFullYear()}</span>
+          <span className="mx-2">Contact:</span>
           <Link
             href="mailto:lifuyi@gmail.com"
-            className="underline underline-offset-2"
+            className="underline underline-offset-2 hover:text-appleBlue transition-colors"
           >
             lifuyi@gmail.com
           </Link>
-          &nbsp;|&nbsp;
+          <span className="mx-2">|</span>
           <span>+86 186 1814 0814</span>
         </div>
       </Layout>

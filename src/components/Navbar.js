@@ -18,19 +18,17 @@ const CustomLink = ({ href, title, className = "" }) => {
   return (
     <Link
       href={href}
-      className={`${className}  rounded relative group lg:text-light lg:dark:text-dark`}
+      className={`${className} rounded relative group lg:text-appleTextLight lg:dark:text-appleTextDark font-medium text-appleSecondary dark:text-appleGray`}
     >
       {title}
       <span
         className={`
-              inline-block h-[1px]  bg-dark absolute left-0 -bottom-0.5 
-              group-hover:w-full transition-[width] ease duration-300 dark:bg-light
-              ${
-                router.asPath === href ? "w-full" : " w-0"
-              } lg:bg-light lg:dark:bg-dark
+              inline-block h-[2px] bg-appleBlue absolute left-0 -bottom-0.5 
+              group-hover:w-full transition-[width] ease duration-300
+              ${router.asPath === href ? "w-full" : "w-0"}
               `}
       >
-        &nbsp;
+         
       </span>
     </Link>
   );
@@ -46,20 +44,18 @@ const CustomMobileLink = ({ href, title, className = "", toggle }) => {
 
   return (
     <button
-      className={`${className}  rounded relative group lg:text-light lg:dark:text-dark`}
+      className={`${className} rounded relative group lg:text-appleTextLight lg:dark:text-appleTextDark font-medium text-appleSecondary dark:text-appleGray`}
       onClick={handleClick}
     >
       {title}
       <span
         className={`
-              inline-block h-[1px]  bg-dark absolute left-0 -bottom-0.5 
-              group-hover:w-full transition-[width] ease duration-300 dark:bg-light
-              ${
-                router.asPath === href ? "w-full" : " w-0"
-              } lg:bg-light lg:dark:bg-dark
+              inline-block h-[2px] bg-appleBlue absolute left-0 -bottom-0.5 
+              group-hover:w-full transition-[width] ease duration-300
+              ${router.asPath === href ? "w-full" : "w-0"}
               `}
       >
-        &nbsp;
+         
       </span>
     </button>
   );
@@ -75,47 +71,47 @@ const Navbar = () => {
 
   return (
     <header
-      className="w-full flex items-center justify-between px-32 pt-10 pb-8 font-medium dark:text-light
-    lg:px-16 relative z-1 md:px-12 sm:px-8
+      className="w-full flex items-center justify-between px-32 pt-10 pb-8 font-medium dark:text-appleTextLight
+    lg:px-16 relative z-10 md:px-12 sm:px-8
     "
     >
       <button
         type="button"
-        className=" flex-col items-center justify-center hidden lg:flex z-9"
+        className=" flex-col items-center justify-center hidden lg:flex z-50"
         aria-controls="mobile-menu"
         aria-expanded={isOpen}
         onClick={handleClick}
       >
         <span className="sr-only">Open main menu</span>
         <span
-          className={`bg-dark dark:bg-light block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
+          className={`bg-appleTextDark dark:bg-appleTextLight block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
             isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
           }`}
         ></span>
         <span
-          className={`bg-dark dark:bg-light block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
+          className={`bg-appleTextDark dark:bg-appleTextLight block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
             isOpen ? "opacity-0" : "opacity-100"
           } my-0.5`}
         ></span>
         <span
-          className={`bg-dark dark:bg-light block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
+          className={`bg-appleTextDark dark:bg-appleTextLight block h-0.5 w-6 rounded-sm transition-all duration-300 ease-out ${
             isOpen ? "-rotate-45 -translate-y-1" : "translate-y-0.5"
           }`}
         ></span>
       </button>
 
       <div className="w-full flex justify-between items-center lg:hidden">
-        <nav className="flex items-center justify-center backdrop-blur-md bg-light/80 dark:bg-dark/80 
-        rounded-full px-6 py-2 shadow-apple">
-          <CustomLink className="mr-4" href="/" title="Home" />
-          <CustomLink className="mx-4" href="/about" title="About" />
-          <CustomLink className="mx-4" href="/projects" title="Achievements" />
-          <CustomLink className="mx-4" href="/gallery" title="Gallery" />
-          <CustomLink className="ml-4" href="/contact" title="Contact" />
+        <nav className="flex items-center justify-center backdrop-blur-md bg-light/90 dark:bg-dark/90 
+        rounded-full px-8 py-3 shadow-apple border border-light dark:border-dark">
+          <CustomLink className="mr-6" href="/" title="Home" />
+          <CustomLink className="mx-6" href="/about" title="About" />
+          <CustomLink className="mx-6" href="/projects" title="Achievements" />
+          <CustomLink className="mx-6" href="/gallery" title="Gallery" />
+          <CustomLink className="ml-6" href="/contact" title="Contact" />
         </nav>
         <nav
-          className="flex items-center justify-center flex-wrap lg:mt-2 backdrop-blur-md 
-          bg-light/80 dark:bg-dark/80 rounded-full px-4 py-2 shadow-apple"
+          className="flex items-center justify-center flex-wrap backdrop-blur-md 
+          bg-light/90 dark:bg-dark/90 rounded-full px-6 py-3 shadow-apple border border-light dark:border-dark ml-4"
         >
           <motion.a
             target={"_blank"}
@@ -161,18 +157,17 @@ const Navbar = () => {
             <GithubIcon />
           </motion.a>
 
-
           <button
             onClick={() => setMode(mode === "light" ? "dark" : "light")}
-            className={`w-7 h-7 ease ml-3 flex items-center justify-center rounded-full p-1  
-            ${mode === "light" ? "bg-dark  text-light" : "bg-light  text-dark"}
-            `}
+            className={`w-7 h-7 ease flex items-center justify-center rounded-full p-1  
+            ${mode === "light" ? "bg-appleBlue text-appleTextLight" : "bg-appleBlue text-appleTextDark"}
+            transition-all duration-300`}
             aria-label="theme-switcher"
           >
             {mode === "light" ? (
-              <SunIcon className={"fill-dark"} />
+              <SunIcon className={"fill-appleTextLight"} />
             ) : (
-              <MoonIcon className={"fill-dark"} />
+              <MoonIcon className={"fill-appleTextDark"} />
             )}
           </button>
         </nav>
@@ -181,51 +176,52 @@ const Navbar = () => {
         <motion.div
           className="min-w-[70vw] sm:min-w-[90vw] h-[75vh] flex justify-between items-center flex-col fixed top-1/2 left-1/2 -translate-x-1/2
       -translate-y-1/2
-      py-32 bg-dark/90 dark:bg-light/75 rounded-lg z-50 backdrop-blur-md
-      "
+      py-32 bg-light/95 dark:bg-dark/95 rounded-2xl z-40 backdrop-blur-md border border-light dark:border-dark
+      shadow-2xl"
           initial={{ scale: 0, x: "-50%", y: "-50%", opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.3 }}
         >
           <nav className="flex items-center justify-center flex-col">
             <CustomMobileLink
               toggle={handleClick}
-              className="mr-4 lg:m-0 lg:my-2"
+              className="mr-4 lg:m-0 lg:my-4 text-2xl"
               href="/"
               title="Home"
             />
             <CustomMobileLink
               toggle={handleClick}
-              className="mx-4 lg:m-0 lg:my-2"
+              className="mx-4 lg:m-0 lg:my-4 text-2xl"
               href="/about"
               title="About"
             />
             <CustomMobileLink
               toggle={handleClick}
-              className="mx-4 lg:m-0 lg:my-2"
+              className="mx-4 lg:m-0 lg:my-4 text-2xl"
               href="/projects"
               title="Achievements"
             />
             <CustomMobileLink
               toggle={handleClick}
-              className="mx-4 lg:m-0 lg:my-2"
+              className="mx-4 lg:m-0 lg:my-4 text-2xl"
               href="/gallery"
               title="Gallery"
             />
             <CustomMobileLink
               toggle={handleClick}
-              className="ml-4 lg:m-0 lg:my-2"
+              className="ml-4 lg:m-0 lg:my-4 text-2xl"
               href="/contact"
               title="Contact"
             />
           </nav>
           <nav
-            className="flex items-center justify-center  mt-2
+            className="flex items-center justify-center mt-4
       "
           >
             <motion.a
               target={"_blank"}
-              className="w-6 mr-3"
-              href="https://github.com/lilxyzz"
+              className="w-8 mr-4"
+              href="https://github.com/lifuyi"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
               aria-label="Checkout my Github profile"
@@ -235,44 +231,37 @@ const Navbar = () => {
 
             <motion.a
               target={"_blank"}
-              className="w-6 mx-3 bg-light rounded-full"
-              href="https://medium.com/@travis.lord"
+              className="w-8 mx-4"
+              href="https://linkedin.com/in/frank-li"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              aria-label="Checkout my Medium profile"
+              aria-label="Connect on LinkedIn"
             >
-              <MediumIcon />
+              <LinkedInIcon />
             </motion.a>
+
             <motion.a
               target={"_blank"}
-              className="w-6 mx-3"
-              href="https://dev.to/lilxyzz"
+              className="w-8 mx-4"
+              href="https://x.com/frank_li"
               whileHover={{ y: -2 }}
               whileTap={{ scale: 0.9 }}
-              aria-label="Checkout my Dev.to profile"
+              aria-label="Follow on X"
             >
-              <DevIcon />
+              <XIcon />
             </motion.a>
-            <motion.a
-              target={"_blank"}
-              className="w-6 mx-3"
-              href="https://dev.to/lilxyzz"
-              whileHover={{ y: -2 }}
-              whileTap={{ scale: 0.9 }}
-              aria-label="My Dev.to profile"
-            ></motion.a>
 
             <button
               onClick={() => setMode(mode === "light" ? "dark" : "light")}
-              className={`w-6 h-6 ease m-1 ml-3 sm:mx-1 flex items-center justify-center rounded-full p-1  
-            ${mode === "light" ? "bg-dark  text-light" : "bg-light  text-dark"}
-            `}
+              className={`w-8 h-8 ease flex items-center justify-center rounded-full p-2 ml-4
+            ${mode === "light" ? "bg-appleBlue text-appleTextLight" : "bg-appleBlue text-appleTextDark"}
+            transition-all duration-300`}
               aria-label="theme-switcher"
             >
               {mode === "light" ? (
-                <SunIcon className={"fill-dark"} />
+                <SunIcon className={"fill-appleTextLight"} />
               ) : (
-                <MoonIcon className={"fill-dark"} />
+                <MoonIcon className={"fill-appleTextDark"} />
               )}
             </button>
           </nav>

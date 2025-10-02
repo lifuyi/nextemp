@@ -102,28 +102,38 @@ export default function About() {
               className="col-span-3 flex flex-col items-start justify-start xl:col-span-4 md:order-2 
             md:col-span-8"
             >
-              <h2 className="mb-4 text-lg font-bold uppercase text-dark/75 dark:text-light/75">
-                BIOGRAPHY
-              </h2>
-              <p className="font-medium ">
-                I'm Frank (FUYI) Li, Founder of Chinida.com (since Oct 2023), a company focused on AI coding, 
-                software development, and digital products. With 15+ years of experience in strategic partnerships 
-                and international business, plus dual Master's degrees from Monash University (IT) and Harbin 
-                Institute of Technology (Law), I combine technical expertise with business leadership.
-              </p>
-              <p className="my-4 font-medium">
-                Now as Founder of Chinida.com, I'm leveraging my extensive background from major tech companies 
-                including MOMO (NASDAQ), Sina Weibo (NASDAQ), and European fintech firms to build innovative 
-                AI and software solutions. My previous experience includes partnerships with Apple, Huawei, 
-                Alipay, PayPal, managing teams that drove millions in revenue growth, and deep expertise in 
-                payment systems, mobile partnerships, and international market expansion.
-              </p>
-              <p className="my-4 font-medium">
-                With fluent English communication skills and a peaceful, integrity-driven personality, 
-                I excel at building lasting international partnerships and driving performance-oriented 
-                results. My unique combination of technical background and business expertise enables 
-                deep collaboration with both technical teams and C-level executives.
-              </p>
+              <div className="mb-6">
+                <h2 className="mb-3 text-2xl font-bold bg-gradient-to-r from-appleBlue to-appleGreen bg-clip-text text-transparent">
+                  BIOGRAPHY
+                </h2>
+                <div className="w-16 h-1 bg-gradient-to-r from-appleBlue to-appleGreen rounded-full"></div>
+              </div>
+              
+              <div className="space-y-6 text-appleSecondary dark:text-light/90">
+                <p className="text-lg font-medium leading-relaxed">
+                  I'm <span className="font-bold text-appleBlue">Frank (FUYI) Li</span>, Founder of <span className="font-semibold text-appleGreen">Chinida.com</span> (since Oct 2023), a company focused on AI coding, 
+                  software development, and digital products. With <span className="font-semibold text-appleOrange">15+ years of experience</span> in strategic partnerships 
+                  and international business, plus dual Master's degrees from <span className="font-medium text-applePurple">Monash University (IT)</span> and <span className="font-medium text-applePurple">Harbin 
+                  Institute of Technology (Law)</span>, I combine technical expertise with business leadership.
+                </p>
+                
+                <div className="bg-gradient-to-r from-appleBlue/5 to-appleGreen/5 p-6 rounded-2xl border-l-4 border-appleBlue">
+                  <p className="text-lg font-medium leading-relaxed">
+                    Now as Founder of <span className="font-semibold text-appleGreen">Chinida.com</span>, I'm leveraging my extensive background from major tech companies 
+                    including <span className="font-semibold text-appleBlue">MOMO (NASDAQ)</span>, <span className="font-semibold text-appleBlue">Sina Weibo (NASDAQ)</span>, and European fintech firms to build innovative 
+                    AI and software solutions. My previous experience includes partnerships with <span className="font-medium text-appleOrange">Apple, Huawei, 
+                    Alipay, PayPal</span>, managing teams that drove millions in revenue growth, and deep expertise in 
+                    payment systems, mobile partnerships, and international market expansion.
+                  </p>
+                </div>
+                
+                <p className="text-lg font-medium leading-relaxed">
+                  With <span className="font-semibold text-appleGreen">fluent English communication skills</span> and a peaceful, integrity-driven personality, 
+                  I excel at building lasting international partnerships and driving performance-oriented 
+                  results. My unique combination of <span className="font-medium text-applePurple">technical background and business expertise</span> enables 
+                  deep collaboration with both technical teams and C-level executives.
+                </p>
+              </div>
             </div>
             <div
               className="relative col-span-3 h-max apple-card p-8 

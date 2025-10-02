@@ -19,10 +19,10 @@ export default function Home() {
 
       <TransitionEffect />
       <article
-        className={`flex min-h-screen items-center text-dark dark:text-light sm:items-start`}
+        className={`flex min-h-screen items-center text-appleTextDark dark:text-appleTextLight sm:items-start`}
       >
-        <Layout className="!pt-24 md:!pt-16 sm:!pt-28">
-          <div className="flex w-full items-start justify-between md:flex-col pt-10 pb-24">
+        <Layout className="!pt-8 md:!pt-6 sm:!pt-8">
+          <div className="flex w-full items-center justify-between md:flex-col pt-4 pb-16 md:pt-2 md:pb-12">
             <div className="w-1/2 lg:hidden md:flex flex self-center max-h-fit">
               {
                 <Image
@@ -42,18 +42,21 @@ export default function Home() {
                 className="!text-left !text-6xl xl:!text-5xl lg:!text-center lg:!text-6xl md:!text-5xl sm:!text-3xl !whitespace-nowrap"
                 gradient={true}
               />
-              <div className="flex w-1/2 w-full items-center items-start lg:w-full  lg:!justify-center  sm:!justify-center  md:!text-center md:inline-block md:w-full">
-                <h2 className="font-semibold capitalize !text-4xl xl:!text-3xl lg:!text-3xl md:!text-4xl sm:!text-2xl text-dark dark:text-light">
+              <div className="w-full lg:!justify-center sm:!justify-center md:!text-center">
+                <h2 className="font-bold !text-4xl xl:!text-3xl lg:!text-3xl md:!text-4xl sm:!text-2xl bg-gradient-to-r from-appleBlue via-appleGreen to-applePurple bg-clip-text text-transparent animate-gradient leading-relaxed mb-6">
                   I drive business growth through strategic partnerships.
                 </h2>
               </div>
 
-              <p className="my-4 text-base font-medium md:text-sm sm:!text-sm">
-                I'm the Founder of Chinida.com (since Oct 2023), focusing on AI coding, software development, and digital products. 
-                With 15+ years of experience in business development and strategic partnerships with global tech companies, 
-                I combine technical expertise with business acumen to drive innovation in AI and software solutions.
-              </p>
-              <div className="mt-2 flex items-center self-start gap-3 lg:self-center lg:grid lg:grid-cols-1">
+              <div className="max-w-2xl mb-6">
+                <p className="text-lg font-medium leading-relaxed text-appleSecondary dark:text-appleTextLight/80 mb-4 md:text-base sm:text-sm">
+                  I'm the <span className="font-semibold text-appleBlue dark:text-appleBlue">Founder of Chinida.com</span> (since Oct 2023), focusing on AI coding, software development, and digital products.
+                </p>
+                <p className="text-lg font-medium leading-relaxed text-appleSecondary dark:text-appleTextLight/80 md:text-base sm:text-sm">
+                  With <span className="font-semibold text-appleGreen">15+ years of experience</span> in business development and strategic partnerships with global tech companies, I combine technical expertise with business acumen to drive innovation in AI and software solutions.
+                </p>
+              </div>
+              <div className="flex items-center self-start gap-4 lg:self-center lg:flex-wrap lg:justify-center md:gap-3 sm:gap-2">
                 <Link
                   href="/about/"
                   target={"_self"}

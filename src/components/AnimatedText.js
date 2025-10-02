@@ -7,24 +7,31 @@ const AnimatedText = ({ text, className = "", gradient = false }) => {
   
   return (
     <div
-      className="py-2 w-full mx-auto flex flex-col items-center justify-center text-center overflow-hidden sm:py-0"
+      className="py-2 w-full mx-auto flex flex-col items-center justify-center text-center sm:py-0"
     >
       <h1
-        className={`inline-block text-dark dark:text-light text-8xl font-bold w-full capitalize ${className} xl:text-6xl`}
+        className={`inline-block text-appleTextDark dark:text-appleTextLight text-8xl font-bold w-full capitalize ${className} xl:text-6xl`}
         style={gradient ? {
           background: 'linear-gradient(to right, #007AFF, #34C759, #007AFF)',
           backgroundClip: 'text',
           WebkitBackgroundClip: 'text',
           WebkitTextFillColor: 'transparent',
           backgroundSize: '200% 200%',
-          animation: 'gradientShift 4s ease infinite'
-        } : {}}
+          animation: 'gradientShift 4s ease infinite',
+          lineHeight: '1.3',
+          paddingBottom: '0.1em',
+          paddingTop: '0.1em'
+        } : { 
+          lineHeight: '1.3',
+          paddingBottom: '0.1em',
+          paddingTop: '0.1em'
+        }}
       >
         {isFrankLi ? (
           // Keep "Frank Li" together on one line
           <>
-            <span className="inline-block">Hey, I'm&nbsp;</span>
-            <span className="inline-block">Frank Li</span>
+            <span className="inline-block">Hey, I'm </span>
+            <span className="inline-block" style={{ paddingBottom: '0.05em' }}>Frank Li</span>
           </>
         ) : (
           // Normal word splitting for other texts
@@ -33,8 +40,9 @@ const AnimatedText = ({ text, className = "", gradient = false }) => {
               <span
                 className="inline-block"
                 key={word + "-" + index}
+                style={{ paddingBottom: '0.05em' }}
               >
-                {word}&nbsp;
+                {word} 
               </span>
             );
           })
