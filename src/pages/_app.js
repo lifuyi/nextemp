@@ -3,15 +3,15 @@ import Navbar from "@/components/Navbar";
 import ErrorBoundary from "@/components/ErrorBoundary";
 import "@/styles/globals.css";
 import { AnimatePresence } from "framer-motion";
-import { Montserrat } from "next/font/google";
+import { Inter } from "next/font/google";
 import Head from "next/head";
 import { useRouter } from "next/router";
 import Script from "next/script";
 import { useEffect } from "react";
 import * as gtag from "../lib/gtag";
 
-// If loading a variable font, you don't need to specify the font weight
-const montserrat = Montserrat({ subsets: ["latin"], variable: "--font-mont" });
+// Inter is a more condensed, modern font that appears flatter
+const inter = Inter({ subsets: ["latin"], variable: "--font-mont" });
 
 export default function App({ Component, pageProps }) {
   const router = useRouter();
@@ -57,7 +57,7 @@ export default function App({ Component, pageProps }) {
         }}
       />
       <main
-        className={`${montserrat.variable} font-mont bg-gradient-to-br from-light/90 via-light to-appleGray/20 
+        className={`${inter.variable} font-mont bg-gradient-to-br from-light/90 via-light to-appleGray/20 
         dark:from-light/5 dark:via-light/2 dark:to-appleGray/5 w-full min-h-screen h-full`}
       >
         <ErrorBoundary>
